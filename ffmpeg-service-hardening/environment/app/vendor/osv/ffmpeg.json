@@ -1,0 +1,68 @@
+{
+  "vulns": [
+    {
+      "id": "OSV-2024-1000",
+      "summary": "Heap overflow in the HEVC decoder",
+      "affected": [
+        {
+          "package": { "name": "ffmpeg", "ecosystem": "Debian" },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                { "introduced": "5.1" },
+                { "fixed": "7:5.1.6-0+deb12u1" }
+              ]
+            }
+          ]
+        },
+        {
+          "package": { "name": "ffmpeg", "ecosystem": "npm" },
+          "ranges": [
+            { "type": "SEMVER", "events": [{ "introduced": "0" }] }
+          ]
+        }
+      ],
+      "database_specific": { "severity": "CRITICAL" }
+    },
+    {
+      "id": "OSV-2024-1500",
+      "summary": "Retracted duplicate of OSV-2024-1000",
+      "withdrawn": "2026-02-10T00:00:00Z",
+      "affected": [
+        {
+          "package": { "name": "ffmpeg", "ecosystem": "Debian" },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                { "introduced": "5.1" },
+                { "fixed": "7:5.1.9-0+deb12u1" }
+              ]
+            }
+          ]
+        }
+      ],
+      "database_specific": { "severity": "HIGH" }
+    },
+    {
+      "id": "OSV-2023-9000",
+      "summary": "Out-of-bounds read in the matroska demuxer",
+      "affected": [
+        {
+          "package": { "name": "ffmpeg", "ecosystem": "Debian" },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                { "introduced": "0" },
+                { "fixed": "7:5.0.0-1" }
+              ]
+            }
+          ]
+        }
+      ],
+      "database_specific": { "severity": "HIGH" }
+    }
+  ]
+}

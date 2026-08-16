@@ -1,0 +1,16 @@
+{
+  "vulns": [
+    {
+      "id": "OSV-CLEAN-1",
+      "affected": [
+        {
+          "package": { "name": "clean-lib", "ecosystem": "npm" },
+          "ranges": [
+            { "type": "SEMVER", "events": [{ "introduced": "0" }, { "fixed": "3.0.0" }] }
+          ]
+        }
+      ],
+      "database_specific": { "severity": "LOW" }
+    }
+  ]
+}

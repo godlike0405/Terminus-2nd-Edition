@@ -1,0 +1,15 @@
+{
+  "issuer_key_id": "tls-int",
+  "this_update": "2026-06-20T00:00:00Z",
+  "next_update": "2026-07-20T00:00:00Z",
+  "entries": [
+    {
+      "serial": "4120",
+      "reason": "keyCompromise"
+    },
+    {
+      "serial": "0x1022",
+      "reason": "keyCompromise"
+    }
+  ]
+}

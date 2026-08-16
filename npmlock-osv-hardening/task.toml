@@ -1,0 +1,27 @@
+version = "2.0"
+
+[metadata]
+author_name = "anonymous"
+author_email = "anonymous"
+difficulty = "medium"
+category = "security"
+subcategories = ["api_integration"]
+number_of_milestones = 0
+codebase_size = "small"
+languages = ["TypeScript"]
+tags = ["supply-chain", "osv", "npm", "semver", "vulnerability-remediation", "dependency-management"]
+expert_time_estimate_min = 210
+junior_time_estimate_min = 420
+
+[verifier]
+timeout_sec = 600.0
+
+[agent]
+timeout_sec = 1800.0
+
+[environment]
+allow_internet = false
+build_timeout_sec = 900.0
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240

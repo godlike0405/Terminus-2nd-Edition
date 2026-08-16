@@ -1,0 +1,22 @@
+{
+  "vulns": [
+    {
+      "id": "OSV-2023-4000",
+      "summary": "Unpatched use-after-free in the AAC parser; no fixed release",
+      "affected": [
+        {
+          "package": { "name": "ffmpeg-legacy", "ecosystem": "Debian" },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                { "introduced": "4.0" }
+              ]
+            }
+          ]
+        }
+      ],
+      "database_specific": { "severity": "HIGH" }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "shop.example": {
+    "TXT": ["v=spf1 ip4:198.51.100.0/24 include:_spf.provider.example -all"]
+  },
+  "_spf.provider.example": {
+    "TXT": ["v=spf1 ip4:203.0.113.0/25 a:out.provider.example -all"]
+  },
+  "out.provider.example": {
+    "A": ["192.0.2.10"]
+  },
+  "_dmarc.shop.example": {
+    "TXT": ["v=DMARC1; p=none; rua=mailto:d@shop.example"]
+  },
+  "mail.corp.example": {
+    "TXT": ["v=spf1 exists:%{ir}.allow.corp.example include:l1.corp.example ~all"]
+  },
+  "4.3.2.1.allow.corp.example": {
+    "A": ["127.0.0.2"]
+  },
+  "l1.corp.example": {
+    "TXT": ["v=spf1 ip4:198.18.0.0/23 -all"]
+  },
+  "_dmarc.mail.corp.example": {
+    "TXT": ["v=DMARC1; p=quarantine; sp=none; pct=50; adkim=s; rua=mailto:d@corp.example"]
+  },
+  "legacy.example.net": {
+    "TXT": ["v=spf1 a ptr +all"],
+    "A": ["192.0.2.50"]
+  }
+}

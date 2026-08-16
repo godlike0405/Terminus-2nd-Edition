@@ -1,0 +1,3 @@
+#!/bin/sh
+app_dir=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+exec node "$app_dir/dist/policy-check.js" "$@"

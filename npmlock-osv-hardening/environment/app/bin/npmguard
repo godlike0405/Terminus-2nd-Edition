@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# npmguard entry point. Runs the compiled tool from /app/dist.
+set -euo pipefail
+exec node /app/dist/cli.js "$@"

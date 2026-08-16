@@ -1,0 +1,16 @@
+{
+  "vulns": [
+    {
+      "id": "OSV-PARSER-1",
+      "affected": [
+        {
+          "package": { "name": "@acme/parser", "ecosystem": "npm" },
+          "ranges": [
+            { "type": "SEMVER", "events": [{ "introduced": "2.0.0" }, { "fixed": "2.4.0" }] }
+          ]
+        }
+      ],
+      "database_specific": { "severity": "CRITICAL" }
+    }
+  ]
+}

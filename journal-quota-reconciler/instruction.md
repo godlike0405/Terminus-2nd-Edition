@@ -1,0 +1,3 @@
+Our fleet journal controller at `/app/bin/journal-reconcile` is generating quota plans that can exhaust shared filesystems and vacuum the wrong namespaces. Repair the Go implementation under `/app` so the command implements `/app/docs/reconciliation-contract.md`, including its validation, allocation, vacuum ordering, canonical artifacts, and atomic failure behavior for arbitrary valid inventories and policies.
+
+The repaired command must accept the documented flags, write the complete output tree under the requested absolute directory, remain deterministic and offline, and be rebuilt at `/app/bin/journal-reconcile` before you finish.

@@ -1,0 +1,18 @@
+{
+  "name": "ffguard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "ffguard": "./bin/ffguard"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "sql.js": "1.13.0",
+    "typescript": "5.9.3",
+    "@types/node": "22.19.1",
+    "@types/sql.js": "1.4.9"
+  }
+}

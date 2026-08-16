@@ -1,0 +1,19 @@
+{
+  "window_start_unix": 1783400400,
+  "controllers": [
+    {"id": "sas-a", "power_domain": "rack-west"},
+    {"id": "sas-b", "power_domain": "rack-west"},
+    {"id": "nvme-1", "power_domain": "rack-east"}
+  ],
+  "arrays": [
+    {"name": "archive", "controller": "sas-a", "timer_unit": "raid-scrub@archive.timer", "enabled": true, "last_scrub_day": 950, "duration_slots": 2, "earliest_slot": 0, "deadline_slot": 10, "load_watts": 180, "scrub_after": []},
+    {"name": "billing/primary", "controller": "sas-b", "timer_unit": "raid-scrub@billing-primary.timer", "enabled": true, "last_scrub_day": 960, "duration_slots": 2, "earliest_slot": 1, "deadline_slot": 11, "load_watts": 170, "scrub_after": [{"array": "archive", "gap_slots": 1}]},
+    {"name": "search-é", "controller": "nvme-1", "timer_unit": "raid-scrub@search-é.timer", "enabled": true, "last_scrub_day": 970, "duration_slots": 2, "earliest_slot": 0, "deadline_slot": 7, "load_watts": 240, "scrub_after": []},
+    {"name": "cold-spare", "controller": "sas-a", "timer_unit": "raid-scrub@cold-spare.timer", "enabled": false, "last_scrub_day": 800, "duration_slots": 1, "earliest_slot": 0, "deadline_slot": 12, "load_watts": 100, "scrub_after": []},
+    {"name": "recent", "controller": "nvme-1", "timer_unit": "raid-scrub@recent.timer", "enabled": true, "last_scrub_day": 997, "duration_slots": 1, "earliest_slot": 0, "deadline_slot": 12, "load_watts": 100, "scrub_after": []}
+  ],
+  "reservations": [
+    {"id": "firmware-sas-b", "controller": "sas-b", "start_slot": 0, "end_slot": 2, "load_watts": 90},
+    {"id": "nvme-telemetry", "controller": "nvme-1", "start_slot": 7, "end_slot": 9, "load_watts": 80}
+  ]
+}

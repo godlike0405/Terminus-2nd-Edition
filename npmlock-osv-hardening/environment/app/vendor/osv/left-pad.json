@@ -1,0 +1,16 @@
+{
+  "vulns": [
+    {
+      "id": "OSV-LEFTPAD-1",
+      "affected": [
+        {
+          "package": { "name": "left-pad", "ecosystem": "npm" },
+          "ranges": [
+            { "type": "SEMVER", "events": [{ "introduced": "0" }, { "fixed": "1.3.0" }] }
+          ]
+        }
+      ],
+      "database_specific": { "severity": "HIGH" }
+    }
+  ]
+}

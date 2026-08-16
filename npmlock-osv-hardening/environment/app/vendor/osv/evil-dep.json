@@ -1,0 +1,16 @@
+{
+  "vulns": [
+    {
+      "id": "OSV-EVIL-1",
+      "affected": [
+        {
+          "package": { "name": "evil-dep", "ecosystem": "npm" },
+          "ranges": [
+            { "type": "SEMVER", "events": [{ "introduced": "0" }] }
+          ]
+        }
+      ],
+      "database_specific": { "severity": "MEDIUM" }
+    }
+  ]
+}

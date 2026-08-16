@@ -1,0 +1,27 @@
+version = "2.0"
+
+[metadata]
+author_name = "anonymous"
+author_email = "anonymous"
+difficulty = "medium"
+category = "system-administration"
+subcategories = ["api_integration"]
+number_of_milestones = 0
+codebase_size = "minimal"
+languages = ["Go"]
+tags = ["tls", "x509", "certificate-rotation", "crl-revocation", "trust-anchors", "nginx"]
+expert_time_estimate_min = 240
+junior_time_estimate_min = 480
+
+[verifier]
+timeout_sec = 600.0
+
+[agent]
+timeout_sec = 1800.0
+
+[environment]
+allow_internet = false
+build_timeout_sec = 900.0
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240

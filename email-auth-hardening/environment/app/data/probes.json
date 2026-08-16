@@ -1,0 +1,13 @@
+{
+  "probes": [
+    { "id": "m001", "domain": "shop.example", "ip": "198.51.100.5" },
+    { "id": "m002", "domain": "shop.example", "ip": "203.0.113.10" },
+    { "id": "m003", "domain": "shop.example", "ip": "192.0.2.10" },
+    { "id": "m004", "domain": "shop.example", "ip": "10.0.0.1" },
+    { "id": "m005", "domain": "mail.corp.example", "ip": "1.2.3.4" },
+    { "id": "m006", "domain": "mail.corp.example", "ip": "198.18.0.5" },
+    { "id": "m007", "domain": "mail.corp.example", "ip": "10.1.1.1" },
+    { "id": "m008", "domain": "legacy.example.net", "ip": "192.0.2.50" },
+    { "id": "m009", "domain": "legacy.example.net", "ip": "8.8.8.8" }
+  ]
+}

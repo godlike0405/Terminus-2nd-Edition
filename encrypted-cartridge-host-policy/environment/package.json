@@ -1,0 +1,13 @@
+{
+  "name": "encrypted-cartridge-host-policy",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@types/node": "22.19.1",
+    "typescript": "5.9.3"
+  }
+}

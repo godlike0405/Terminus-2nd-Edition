@@ -1,0 +1,47 @@
+{
+  "account": "archive-cartridge",
+  "group": "archive-cartridge",
+  "worker": "/usr/local/libexec/archive-cartridge-worker",
+  "source": "/srv/archive/source",
+  "lock": "/run/archive-cartridge/archive.lock",
+  "logDirectory": "/var/log/archive-cartridge",
+  "stateDirectory": "/var/lib/archive-cartridge",
+  "mountRoot": "/run/archive-cartridge/mnt",
+  "quarantineDirectory": "/var/lib/archive-cartridge/quarantine",
+  "failureWindowSeconds": 3600,
+  "slice": {
+    "cpuQuotaPercent": 150,
+    "memoryMiB": 768,
+    "tasksMax": 48
+  },
+  "cartridges": [
+    {
+      "profile": "weekly-a",
+      "luksUuid": "89f5b26e-1aa2-4b29-94af-e539629d60cc",
+      "filesystemUuid": "c4c64ed8-c63f-4883-8103-10aef633ad61",
+      "mapping": "archive-weekly-a",
+      "credential": "/etc/credstore.encrypted/archive-weekly-a.key",
+      "deviceSerial": "ACME_WA_042",
+      "mountOptions": ["nodev", "nosuid", "noexec", "noatime"],
+      "maxRuntimeSeconds": 5400,
+      "ioWeight": 180,
+      "memoryMiB": 256,
+      "maxArchiveBytes": 1099511627776,
+      "failureBurst": 2
+    },
+    {
+      "profile": "monthly-vault",
+      "luksUuid": "fd3eb5fa-eb17-46ce-9470-03c9dd06a742",
+      "filesystemUuid": "7dc0898a-601c-445e-b436-c8a7ba317705",
+      "mapping": "archive-monthly-vault",
+      "credential": "/etc/credstore.encrypted/archive-monthly-vault.key",
+      "deviceSerial": "ACME_MV_117",
+      "mountOptions": ["nodev", "nosuid", "noexec", "noatime", "ro"],
+      "maxRuntimeSeconds": 10800,
+      "ioWeight": 80,
+      "memoryMiB": 384,
+      "maxArchiveBytes": 8796093022208,
+      "failureBurst": 1
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+[Unit]
+Description=Queue archive filesystem
+
+[Mount]
+What=/dev/mapper/queue-archive
+Where=/srv/queue-archive
+Type=ext4
+Options=nofail
+
+[Install]
+WantedBy=multi-user.target

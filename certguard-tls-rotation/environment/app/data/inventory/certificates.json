@@ -1,0 +1,385 @@
+[
+  {
+    "id": "root-acme",
+    "subject": "Acme Internal Root CA",
+    "subject_key_id": "acme-root",
+    "authority_key_id": "acme-root",
+    "serial": "1",
+    "not_before": "2020-01-01T00:00:00Z",
+    "not_after": "2032-01-01T00:00:00Z",
+    "is_ca": true,
+    "path_len": null,
+    "key_usages": [
+      "certSign",
+      "crlSign"
+    ],
+    "ext_key_usages": [],
+    "sans": [],
+    "name_constraints": null
+  },
+  {
+    "id": "root-legacy",
+    "subject": "Acme Legacy Root CA",
+    "subject_key_id": "legacy-root",
+    "authority_key_id": "legacy-root",
+    "serial": "1",
+    "not_before": "2016-01-01T00:00:00Z",
+    "not_after": "2026-12-31T00:00:00Z",
+    "is_ca": true,
+    "path_len": null,
+    "key_usages": [
+      "certSign",
+      "crlSign"
+    ],
+    "ext_key_usages": [],
+    "sans": [],
+    "name_constraints": null
+  },
+  {
+    "id": "int-tls",
+    "subject": "Acme TLS Issuing CA",
+    "subject_key_id": "tls-int",
+    "authority_key_id": "acme-root",
+    "serial": "0x2a01",
+    "not_before": "2024-01-01T00:00:00Z",
+    "not_after": "2029-01-01T00:00:00Z",
+    "is_ca": true,
+    "path_len": 0,
+    "key_usages": [
+      "certSign",
+      "crlSign"
+    ],
+    "ext_key_usages": [],
+    "sans": [],
+    "name_constraints": {
+      "permitted": [
+        "example.internal"
+      ],
+      "excluded": []
+    }
+  },
+  {
+    "id": "root-ext",
+    "subject": "Partner External Root",
+    "subject_key_id": "ext-root",
+    "authority_key_id": "ext-root",
+    "serial": "1",
+    "not_before": "2020-01-01T00:00:00Z",
+    "not_after": "2032-01-01T00:00:00Z",
+    "is_ca": true,
+    "path_len": null,
+    "key_usages": [
+      "certSign",
+      "crlSign"
+    ],
+    "ext_key_usages": [],
+    "sans": [],
+    "name_constraints": null
+  },
+  {
+    "id": "int-ext",
+    "subject": "Partner External Issuing CA",
+    "subject_key_id": "ext-int",
+    "authority_key_id": "ext-root",
+    "serial": "1",
+    "not_before": "2023-01-01T00:00:00Z",
+    "not_after": "2030-01-01T00:00:00Z",
+    "is_ca": true,
+    "path_len": null,
+    "key_usages": [
+      "certSign",
+      "crlSign"
+    ],
+    "ext_key_usages": [],
+    "sans": [],
+    "name_constraints": null
+  },
+  {
+    "id": "leaf-web-2025",
+    "subject": "web.example.internal",
+    "subject_key_id": "w2025",
+    "authority_key_id": "tls-int",
+    "serial": "4101",
+    "not_before": "2025-07-20T00:00:00Z",
+    "not_after": "2026-07-20T00:00:00Z",
+    "is_ca": false,
+    "path_len": null,
+    "key_usages": [
+      "digitalSignature",
+      "keyEncipherment"
+    ],
+    "ext_key_usages": [
+      "serverAuth"
+    ],
+    "sans": [
+      "web.example.internal"
+    ],
+    "name_constraints": null
+  },
+  {
+    "id": "leaf-web-2026",
+    "subject": "web.example.internal",
+    "subject_key_id": "w2026",
+    "authority_key_id": "tls-int",
+    "serial": "4102",
+    "not_before": "2026-06-01T00:00:00Z",
+    "not_after": "2027-07-01T00:00:00Z",
+    "is_ca": false,
+    "path_len": null,
+    "key_usages": [
+      "digitalSignature",
+      "keyEncipherment"
+    ],
+    "ext_key_usages": [
+      "serverAuth"
+    ],
+    "sans": [
+      "web.example.internal",
+      "*.web.example.internal"
+    ],
+    "name_constraints": null
+  },
+  {
+    "id": "leaf-api",
+    "subject": "api.example.internal",
+    "subject_key_id": "api1",
+    "authority_key_id": "tls-int",
+    "serial": "4110",
+    "not_before": "2026-01-01T00:00:00Z",
+    "not_after": "2027-03-01T00:00:00Z",
+    "is_ca": false,
+    "path_len": null,
+    "key_usages": [
+      "digitalSignature",
+      "keyEncipherment"
+    ],
+    "ext_key_usages": [
+      "serverAuth"
+    ],
+    "sans": [
+      "api.example.internal",
+      "*.api.example.internal"
+    ],
+    "name_constraints": null
+  },
+  {
+    "id": "leaf-mail-2024",
+    "subject": "mail.example.internal",
+    "subject_key_id": "mail1",
+    "authority_key_id": "tls-int",
+    "serial": "4120",
+    "not_before": "2025-02-01T00:00:00Z",
+    "not_after": "2027-02-01T00:00:00Z",
+    "is_ca": false,
+    "path_len": null,
+    "key_usages": [
+      "digitalSignature",
+      "keyEncipherment"
+    ],
+    "ext_key_usages": [
+      "serverAuth"
+    ],
+    "sans": [
+      "mail.example.internal"
+    ],
+    "name_constraints": null
+  },
+  {
+    "id": "leaf-mail-2026",
+    "subject": "mail.example.internal",
+    "subject_key_id": "mail2",
+    "authority_key_id": "tls-int",
+    "serial": "4121",
+    "not_before": "2026-05-01T00:00:00Z",
+    "not_after": "2027-05-01T00:00:00Z",
+    "is_ca": false,
+    "path_len": null,
+    "key_usages": [
+      "digitalSignature",
+      "keyEncipherment"
+    ],
+    "ext_key_usages": [
+      "serverAuth"
+    ],
+    "sans": [
+      "mail.example.internal"
+    ],
+    "name_constraints": null
+  },
+  {
+    "id": "leaf-vault",
+    "subject": "vault.example.internal",
+    "subject_key_id": "vault1",
+    "authority_key_id": "tls-int",
+    "serial": "4130",
+    "not_before": "2025-03-01T00:00:00Z",
+    "not_after": "2027-03-01T00:00:00Z",
+    "is_ca": false,
+    "path_len": null,
+    "key_usages": [
+      "digitalSignature",
+      "keyEncipherment"
+    ],
+    "ext_key_usages": [
+      "serverAuth"
+    ],
+    "sans": [
+      "vault.example.internal"
+    ],
+    "name_constraints": null
+  },
+  {
+    "id": "leaf-portal-ext",
+    "subject": "portal.example.internal",
+    "subject_key_id": "portal1",
+    "authority_key_id": "ext-int",
+    "serial": "4140",
+    "not_before": "2026-01-01T00:00:00Z",
+    "not_after": "2027-06-01T00:00:00Z",
+    "is_ca": false,
+    "path_len": null,
+    "key_usages": [
+      "digitalSignature",
+      "keyEncipherment"
+    ],
+    "ext_key_usages": [
+      "serverAuth"
+    ],
+    "sans": [
+      "portal.example.internal"
+    ],
+    "name_constraints": null
+  },
+  {
+    "id": "leaf-portal-int",
+    "subject": "portal.example.internal",
+    "subject_key_id": "portal2",
+    "authority_key_id": "tls-int",
+    "serial": "4141",
+    "not_before": "2026-04-01T00:00:00Z",
+    "not_after": "2027-06-01T00:00:00Z",
+    "is_ca": false,
+    "path_len": null,
+    "key_usages": [
+      "digitalSignature",
+      "keyEncipherment"
+    ],
+    "ext_key_usages": [
+      "serverAuth"
+    ],
+    "sans": [
+      "portal.example.internal"
+    ],
+    "name_constraints": null
+  },
+  {
+    "id": "leaf-reports-2023",
+    "subject": "reports.example.internal",
+    "subject_key_id": "rep1",
+    "authority_key_id": "tls-int",
+    "serial": "4150",
+    "not_before": "2023-06-01T00:00:00Z",
+    "not_after": "2026-06-01T00:00:00Z",
+    "is_ca": false,
+    "path_len": null,
+    "key_usages": [
+      "digitalSignature",
+      "keyEncipherment"
+    ],
+    "ext_key_usages": [
+      "serverAuth"
+    ],
+    "sans": [
+      "reports.example.internal"
+    ],
+    "name_constraints": null
+  },
+  {
+    "id": "leaf-reports-2026",
+    "subject": "reports.example.internal",
+    "subject_key_id": "rep2",
+    "authority_key_id": "tls-int",
+    "serial": "4151",
+    "not_before": "2026-05-01T00:00:00Z",
+    "not_after": "2027-08-01T00:00:00Z",
+    "is_ca": false,
+    "path_len": null,
+    "key_usages": [
+      "digitalSignature",
+      "keyEncipherment"
+    ],
+    "ext_key_usages": [
+      "serverAuth"
+    ],
+    "sans": [
+      "reports.example.internal"
+    ],
+    "name_constraints": null
+  },
+  {
+    "id": "leaf-search",
+    "subject": "search.example.internal",
+    "subject_key_id": "search1",
+    "authority_key_id": "tls-int",
+    "serial": "4160",
+    "not_before": "2026-02-01T00:00:00Z",
+    "not_after": "2027-02-01T00:00:00Z",
+    "is_ca": false,
+    "path_len": null,
+    "key_usages": [
+      "digitalSignature",
+      "keyEncipherment"
+    ],
+    "ext_key_usages": [
+      "serverAuth"
+    ],
+    "sans": [
+      "search.example.internal"
+    ],
+    "name_constraints": null
+  },
+  {
+    "id": "leaf-billing",
+    "subject": "billing.example.internal",
+    "subject_key_id": "bill1",
+    "authority_key_id": "dangling-issuer",
+    "serial": "4170",
+    "not_before": "2026-01-01T00:00:00Z",
+    "not_after": "2027-01-01T00:00:00Z",
+    "is_ca": false,
+    "path_len": null,
+    "key_usages": [
+      "digitalSignature",
+      "keyEncipherment"
+    ],
+    "ext_key_usages": [
+      "serverAuth"
+    ],
+    "sans": [
+      "billing.example.internal"
+    ],
+    "name_constraints": null
+  },
+  {
+    "id": "leaf-old",
+    "subject": "old.example.internal",
+    "subject_key_id": "old1",
+    "authority_key_id": "tls-int",
+    "serial": "4180",
+    "not_before": "2022-01-01T00:00:00Z",
+    "not_after": "2026-05-01T00:00:00Z",
+    "is_ca": false,
+    "path_len": null,
+    "key_usages": [
+      "digitalSignature",
+      "keyEncipherment"
+    ],
+    "ext_key_usages": [
+      "serverAuth"
+    ],
+    "sans": [
+      "old.example.internal"
+    ],
+    "name_constraints": null
+  }
+]

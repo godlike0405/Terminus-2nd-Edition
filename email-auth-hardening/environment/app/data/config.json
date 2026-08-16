@@ -1,0 +1,5 @@
+{
+  "rua": "mailto:dmarc-agg@sec.example",
+  "policy": "reject",
+  "spf_all": "-all"
+}

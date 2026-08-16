@@ -1,0 +1,56 @@
+[
+  {
+    "unit": "web.service",
+    "server_name": "web.example.internal",
+    "bound_id": "leaf-web-2025",
+    "enabled": true
+  },
+  {
+    "unit": "api.service",
+    "server_name": "api.example.internal",
+    "bound_id": "leaf-api",
+    "enabled": true
+  },
+  {
+    "unit": "mail.service",
+    "server_name": "mail.example.internal",
+    "bound_id": "leaf-mail-2024",
+    "enabled": true
+  },
+  {
+    "unit": "vault.service",
+    "server_name": "vault.example.internal",
+    "bound_id": "leaf-vault",
+    "enabled": true
+  },
+  {
+    "unit": "portal.service",
+    "server_name": "portal.example.internal",
+    "bound_id": "leaf-portal-ext",
+    "enabled": true
+  },
+  {
+    "unit": "reports.service",
+    "server_name": "reports.example.internal",
+    "bound_id": "leaf-reports-2023",
+    "enabled": false
+  },
+  {
+    "unit": "search.service",
+    "server_name": "search.example.internal",
+    "bound_id": "search-cert-missing",
+    "enabled": true
+  },
+  {
+    "unit": "billing.service",
+    "server_name": "billing.example.internal",
+    "bound_id": "leaf-billing",
+    "enabled": true
+  },
+  {
+    "unit": "old.service",
+    "server_name": "old.example.internal",
+    "bound_id": "leaf-old",
+    "enabled": false
+  }
+]

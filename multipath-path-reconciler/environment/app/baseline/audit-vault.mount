@@ -1,0 +1,10 @@
+[Unit]
+Description=Compliance audit vault
+
+[Mount]
+What=/dev/mapper/audit-vault
+Where=/srv/audit-vault
+Type=xfs
+
+[Install]
+WantedBy=multi-user.target

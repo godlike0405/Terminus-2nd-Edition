@@ -1,0 +1,22 @@
+{
+  "today_day": 1000,
+  "slot_minutes": 15,
+  "horizon_slots": 12,
+  "max_parallel": 2,
+  "power_limits": {
+    "rack-west": 300,
+    "rack-east": 260
+  },
+  "energy_limits": {
+    "rack-west": {"window_slots": 4, "max_watt_slots": 800},
+    "rack-east": {"window_slots": 4, "max_watt_slots": 720}
+  },
+  "blackouts": [[4, 5], [10, 11]],
+  "arrays": {
+    "archive": {"cadence_days": 30, "priority": 5},
+    "billing/primary": {"cadence_days": 30, "priority": 9},
+    "search-é": {"cadence_days": 20, "priority": 7},
+    "cold-spare": {"cadence_days": 30, "priority": 1},
+    "recent": {"cadence_days": 10, "priority": 8}
+  }
+}
